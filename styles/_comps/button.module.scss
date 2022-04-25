@@ -1,0 +1,14 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+
+.cdx-button {
+  @include u-scale-effect;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 1px;
+  padding: 15px 50px;
+  color: $secondary;
+  font-weight: 900;
+  text-transform: uppercase;
+}
