@@ -1,0 +1,67 @@
+@mixin u_max-width {
+  max-width: 1080px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+@mixin u_centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin u_fullsize {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin u_between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin u_row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin u_col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin u_gap($gap) {
+  & > :not(:last-child) {
+    margin-right: $gap;
+  }
+}
+
+@mixin u_padding-v($pad) {
+  padding: $pad 0;
+}
+
+@mixin u_padding-h($pad) {
+  padding: 0 $pad;
+}
+
+@mixin u_margin-v($mar) {
+  margin: $mar 0;
+}
+
+@mixin u_margin-h($mar) {
+  margin: 0 $mar;
+}
+
+@mixin u-shadow {
+  box-shadow: 0 3px 7px 1px #aaa;
+}
+
+@mixin u-scale-effect {
+  transition: transform 0.5s;
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
