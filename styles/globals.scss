@@ -15,9 +15,14 @@
 
   color: $black;
   font-family: $roboto;
+  scroll-behavior: smooth;
 }
 
 h1 {
   font-size: 70px;
   font-weight: 900;
+}
+
+a {
+  text-decoration: none;
 }

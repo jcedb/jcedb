@@ -8,12 +8,12 @@ function Layout({ children }: IBaseProps) {
   return (
     <>
       <Head>
-        <title>CEDDEX Software Development</title>
+        <title>Ceddex Software Development</title>
       </Head>
 
       <Navbar />
 
-      <div style={styles}>{children}</div>
+      <main style={styles}>{children}</main>
 
       <Footer />
     </>
