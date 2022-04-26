@@ -2,23 +2,23 @@ import Link from 'next/link';
 import React, { useEffect } from 'react';
 import { FaArrowAltCircleDown } from 'react-icons/fa';
 import styles from '../styles/_pages/hero.module.scss';
-import animations from '../_core/animations/hero.animate';
+import animate from '../_core/animations/hero.animate';
 
 function Hero() {
   useEffect(() => {
     if (typeof window !== undefined) {
-      animations();
+      animate();
     }
   }, []);
 
   return (
-    <div id="js-hero" className={styles['hero']}>
+    <section id="js-hero" className={styles['hero']}>
       <div className={styles['hero__container']}>
-        <div className={styles['hero__heading']}>
+        <header className={styles['hero__heading']}>
           <h1 className="js-heading">Adapt to modern</h1>
           <h1 className="js-heading">digital world</h1>
           <h1 className="js-heading">
-            <Link href="#manifesto">
+            <Link href="#js-manifesto">
               <a>
                 <FaArrowAltCircleDown
                   className={styles['hero__heading--arrowdown']}
@@ -27,9 +27,9 @@ function Hero() {
               </a>
             </Link>
           </h1>
-        </div>
+        </header>
       </div>
-    </div>
+    </section>
   );
 }
 

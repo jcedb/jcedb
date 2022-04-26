@@ -3,13 +3,13 @@
 
 .manifesto {
   position: relative;
-  background-color: $white;
+  background-color: $black;
 }
 
 .manifesto__container {
   min-height: 100vh;
 
   * {
-    color: $black;
+    color: $white;
   }
 }

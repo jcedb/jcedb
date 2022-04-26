@@ -3,13 +3,13 @@
 
 .about {
   position: relative;
-  background-color: $black;
+  background-color: $white;
 }
 
 .about__container {
   min-height: 100vh;
 
   * {
-    color: $white;
+    color: $black;
   }
 }

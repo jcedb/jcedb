@@ -1,11 +1,11 @@
-import styles from './../../styles/_comps/navbar.module.scss';
 import React, { useEffect } from 'react';
-import animations from '../../_core/animations/navbar.animate';
+import styles from './../../styles/_comps/navbar.module.scss';
+import animate from '../../_core/animations/navbar.animate';
 
 function Navbar() {
   useEffect(() => {
     if (typeof window !== undefined) {
-      animations();
+      animate();
     }
   }, []);
 
@@ -15,9 +15,15 @@ function Navbar() {
         <div className={styles['navbar__logo']}>CDX</div>
 
         <ul className={styles['navbar__menus']}>
-          <li>Manifesto</li>
-          <li>Our Team</li>
-          <li>Reach Us</li>
+          <li>
+            <a href="#js-manifesto">Manifesto</a>
+          </li>
+          <li>
+            <a href="#js-about">Our Team</a>
+          </li>
+          <li>
+            <a href="#js-contact">Reach Us</a>
+          </li>
         </ul>
       </div>
     </nav>
