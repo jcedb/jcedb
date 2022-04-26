@@ -11,9 +11,7 @@ function Manifesto() {
 
   return (
     <section id="js-manifesto" className={styles['manifesto']}>
-      <div className={styles['manifesto__container']}>
-        <h2>Manifesto</h2>
-      </div>
+      <div className={styles['manifesto__container']}></div>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { cdxColors } from '../config/colors.config';
 
 export default () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -12,7 +13,7 @@ export default () => {
   });
 
   gsap.to('#js-hero', {
-    backgroundColor: '#333',
+    backgroundColor: cdxColors.black,
     scrollTrigger: {
       trigger: '#js-hero',
       start: 'bottom bottom',

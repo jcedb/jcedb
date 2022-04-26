@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import React, { CSSProperties } from 'react';
 import { IBaseProps } from '../../_core/models/base.model';
-import Footer from './Footer';
-import Navbar from './Navbar';
+import Footer from './footer';
+import Navbar from './navbar';
 
 function Layout({ children }: IBaseProps) {
   return (

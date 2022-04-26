@@ -1,7 +1,7 @@
 import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import smoothscroll from 'smoothscroll-polyfill';
-import Layout from '../_comps/layouts/Layout';
+import Layout from '../_comps/layouts/layout';
 import { useEffect } from 'react';
 
 function MyApp({ Component, pageProps }: AppProps) {
