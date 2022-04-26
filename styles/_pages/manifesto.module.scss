@@ -1,0 +1,15 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+
+.manifesto {
+  position: relative;
+  background-color: $white;
+}
+
+.manifesto__container {
+  min-height: 100vh;
+
+  * {
+    color: $black;
+  }
+}

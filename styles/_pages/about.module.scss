@@ -1,0 +1,15 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+
+.about {
+  position: relative;
+  background-color: $black;
+}
+
+.about__container {
+  min-height: 100vh;
+
+  * {
+    color: $white;
+  }
+}

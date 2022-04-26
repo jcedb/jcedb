@@ -58,6 +58,10 @@
   box-shadow: 0 3px 7px 1px #aaa;
 }
 
+@mixin u-transition($prop) {
+  transition: $prop 0.5s;
+}
+
 @mixin u-scale-effect {
   transition: transform 0.5s;
 
