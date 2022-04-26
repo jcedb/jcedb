@@ -1,0 +1,15 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+
+.contact {
+  position: relative;
+  background-color: $white;
+}
+
+.contact__container {
+  min-height: 100vh;
+
+  * {
+    color: $black;
+  }
+}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gsap": "^3.10.4",
     "intl": "^1.2.5",
     "lodash": "^4.17.21",
     "lunox": "^0.9.1",

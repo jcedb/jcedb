@@ -1,9 +1,16 @@
 import styles from './../../styles/_comps/navbar.module.scss';
-import React from 'react';
+import React, { useEffect } from 'react';
+import animations from '../../_core/animations/navbar.animate';
 
 function Navbar() {
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      animations();
+    }
+  }, []);
+
   return (
-    <nav className={styles['navbar']}>
+    <nav id="js-navbar" className={styles['navbar']}>
       <div className={styles['navbar__container']}>
         <div className={styles['navbar__logo']}>CDX</div>
 

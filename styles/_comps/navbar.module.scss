@@ -8,6 +8,12 @@
   position: fixed;
   z-index: 10;
   width: 100%;
+
+  * {
+    @include u-transition(color);
+
+    color: $white;
+  }
 }
 
 .navbar__container {
@@ -19,15 +25,10 @@
   font-family: $josefin;
   font-size: 35px;
   font-weight: 900;
-  color: $white;
   letter-spacing: -3px;
 }
 
 .navbar__menus {
   @include u_row;
   @include u_gap(30px);
-
-  li {
-    color: $white;
-  }
 }
