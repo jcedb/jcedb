@@ -12,7 +12,7 @@ function Navbar() {
   return (
     <nav id="js-navbar" className={styles['navbar']}>
       <div className={styles['navbar__container']}>
-        <div className={styles['navbar__logo']}>CDX</div>
+        <span className={styles['navbar__logo']}>CDX</span>
 
         <ul className={styles['navbar__menus']}>
           <li>
