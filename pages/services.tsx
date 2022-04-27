@@ -17,7 +17,7 @@ function Services() {
     <section id="js-services" className={styles['services']}>
       <div className={styles['services__container']}>
         <div className={styles['services__title']}>
-          <CdxTitle id="js-services-title">Services we offer</CdxTitle>
+          <CdxTitle id="js-services-title">What we offer</CdxTitle>
         </div>
 
         <div className={styles['services__content']}>

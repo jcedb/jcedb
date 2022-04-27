@@ -18,7 +18,7 @@ function Hero() {
           <p className="js-heading">Adapt to modern </p>
           <p className="js-heading">digital world</p>
           <p className="js-heading">
-            <Link href="#js-manifesto">
+            <Link href="#js-contact">
               <a>
                 <FaArrowAltCircleDown
                   className={styles['hero__heading--arrowdown']}

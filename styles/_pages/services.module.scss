@@ -9,7 +9,7 @@
 
 .services__container {
   @include u_max-width;
-  @include u-padding-v(50px);
+  @include u-padding-v(100px);
 
   overflow: hidden;
   padding-bottom: 100px;
