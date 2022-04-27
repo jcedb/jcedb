@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import React, { useEffect } from 'react';
-import styles from '../styles/_pages/manifesto.module.scss';
+import styles from '../styles/_pages/services.module.scss';
 import CdxButton from '../_comps/CdxButton';
 import CdxSkew from '../_comps/CdxSkew';
-import animate from '../_core/animations/manifesto.animate';
+import animate from '../_core/animations/services.animate';
 
-function Manifesto() {
+function Services() {
   useEffect(() => {
     if (typeof window !== undefined) {
       animate();
@@ -13,16 +13,14 @@ function Manifesto() {
   }, []);
 
   return (
-    <section id="js-manifesto" className={styles['manifesto']}>
-      <div className={styles['manifesto__container']}>
-        <div
-          className={'js-manifesto-services ' + styles['manifesto__services']}
-        >
-          <div className={styles['manifesto__services--graphic']}>
-            <Image src="/manifesto/mobile.svg" height={400} width={400} />
+    <section id="js-services" className={styles['services']}>
+      <div className={styles['services__container']}>
+        <div className={'js-services-offered ' + styles['services__offered']}>
+          <div className={styles['services__offered--graphic']}>
+            <Image src="/services/mobile.svg" height={400} width={400} />
           </div>
 
-          <div className={styles['manifesto__services--description']}>
+          <div className={styles['services__offered--description']}>
             <h2>Mobile App</h2>
             <p>
               Whether it is for business or personal use, our capable team can
@@ -34,14 +32,12 @@ function Manifesto() {
           </div>
         </div>
 
-        <div
-          className={'js-manifesto-services ' + styles['manifesto__services']}
-        >
-          <div className={styles['manifesto__services--graphic']}>
-            <Image src="/manifesto/website.svg" height={400} width={400} />
+        <div className={'js-services-offered ' + styles['services__offered']}>
+          <div className={styles['services__offered--graphic']}>
+            <Image src="/services/website.svg" height={400} width={400} />
           </div>
 
-          <div className={styles['manifesto__services--description']}>
+          <div className={styles['services__offered--description']}>
             <h2>Website</h2>
             <p>
               Get more customers for your business. Manage and organize your
@@ -53,14 +49,12 @@ function Manifesto() {
           </div>
         </div>
 
-        <div
-          className={'js-manifesto-services ' + styles['manifesto__services']}
-        >
-          <div className={styles['manifesto__services--graphic']}>
-            <Image src="/manifesto/software.svg" height={400} width={400} />
+        <div className={'js-services-offered ' + styles['services__offered']}>
+          <div className={styles['services__offered--graphic']}>
+            <Image src="/services/software.svg" height={400} width={400} />
           </div>
 
-          <div className={styles['manifesto__services--description']}>
+          <div className={styles['services__offered--description']}>
             <h2>Business Software</h2>
             <p>
               Get organized with the support of our business software service.
@@ -74,9 +68,9 @@ function Manifesto() {
         </div>
       </div>
 
-      <CdxSkew id="js-manifesto-skew" />
+      <CdxSkew id="js-services-skew" />
     </section>
   );
 }
 
-export default Manifesto;
+export default Services;

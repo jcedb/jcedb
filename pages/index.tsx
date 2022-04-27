@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Manifesto from './manifesto';
+import Services from './services';
 import About from './about';
 import Contact from './contact';
 import Hero from './hero';
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Hero />
-      <Manifesto />
+      <Services />
       <About />
       <Contact />
     </>

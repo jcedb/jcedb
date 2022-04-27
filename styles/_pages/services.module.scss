@@ -2,12 +2,12 @@
 @use '../_base/fonts.scss' as *;
 @use '../_base/colors.scss' as *;
 
-.manifesto {
+.services {
   position: relative;
   background-color: $black;
 }
 
-.manifesto__container {
+.services__container {
   @include u-gap-v(100px);
   @include u-padding-v(50px);
 
@@ -20,7 +20,7 @@
   }
 }
 
-.manifesto__services {
+.services__offered {
   @include u_max-width;
   @include u_between;
 
@@ -28,7 +28,7 @@
     flex-direction: row-reverse;
   }
 
-  .manifesto__services--description {
+  .services__offered--description {
     @include u-gap-v(30px);
 
     max-width: 350px;
