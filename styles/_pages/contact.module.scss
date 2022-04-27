@@ -3,13 +3,16 @@
 
 .contact {
   position: relative;
-  background-color: $black;
+  background-color: $white;
 }
 
 .contact__container {
+  @include u_max-width;
+  @include u-padding-v(100px);
+
   min-height: 100vh;
 
   * {
-    color: $white;
+    color: $black;
   }
 }

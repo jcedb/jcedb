@@ -16,6 +16,7 @@
     color: $white;
   }
 }
+
 .hero__heading {
   .hero__heading--arrowdown {
     @include u_scale-effect;
@@ -23,7 +24,7 @@
     cursor: pointer;
   }
 
-  h1 {
+  p {
     opacity: 0;
 
     &:nth-child(1) {

@@ -14,11 +14,11 @@ function Hero() {
   return (
     <section id="js-hero" className={styles['hero']}>
       <div className={styles['hero__container']}>
-        <header className={styles['hero__heading']}>
-          <h1 className="js-heading">Adapt to modern</h1>
-          <h1 className="js-heading">digital world</h1>
-          <h1 className="js-heading">
-            <Link href="#js-manifesto">
+        <h1 className={styles['hero__heading']}>
+          <p className="js-heading">Adapt to modern </p>
+          <p className="js-heading">digital world</p>
+          <p className="js-heading">
+            <Link href="#js-contact">
               <a>
                 <FaArrowAltCircleDown
                   className={styles['hero__heading--arrowdown']}
@@ -26,8 +26,8 @@ function Hero() {
                 />
               </a>
             </Link>
-          </h1>
-        </header>
+          </p>
+        </h1>
       </div>
     </section>
   );

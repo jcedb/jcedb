@@ -18,11 +18,11 @@ function Navbar() {
           <li>
             <a href="#js-services">Services</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#js-about">Our Team</a>
-          </li>
+          </li> */}
           <li>
-            <a href="#js-contact">Reach Us</a>
+            <a href="#js-contact">Contact</a>
           </li>
         </ul>
       </div>

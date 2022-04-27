@@ -23,4 +23,17 @@ export default () => {
       }
     });
   });
+
+  gsap.utils.toArray('#js-services-title *').forEach((panel, index) => {
+    gsap.from(panel as HTMLElement, {
+      xPercent: index === 1 ? 100 : -100,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: '#js-services-title',
+        start: 'top 70%',
+        end: 'top 30%',
+        scrub: true
+      }
+    });
+  });
 };
