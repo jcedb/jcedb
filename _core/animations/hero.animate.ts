@@ -17,7 +17,7 @@ export default () => {
     scrollTrigger: {
       trigger: '#js-hero',
       start: 'bottom bottom',
-      end: '+=70%',
+      end: '+=80%',
       scrub: true
     }
   });

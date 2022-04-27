@@ -4,9 +4,13 @@ import { IBaseProps } from '../_core/models/base.model';
 
 interface Props extends IBaseProps {}
 
-function CdxButton({ children, style, onClick }: Props) {
+function CdxButton({ children, style, className = '', onClick }: Props) {
   return (
-    <button style={style} className={styles['cdx-button']} onClick={onClick}>
+    <button
+      style={style}
+      className={styles['cdx-button'] + ' ' + styles[className]}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

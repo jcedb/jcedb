@@ -1,4 +1,5 @@
 @use '../utils' as *;
+@use '../_base/fonts.scss' as *;
 @use '../_base/colors.scss' as *;
 
 .manifesto {
@@ -7,9 +8,33 @@
 }
 
 .manifesto__container {
+  @include u-gap-v(100px);
+  @include u-padding-v(50px);
+
+  padding-bottom: 150px;
   min-height: 100vh;
 
   * {
     color: $white;
+  }
+}
+
+.manifesto__services {
+  @include u_max-width;
+  @include u_between;
+
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .manifesto__services--description {
+    @include u-gap-v(30px);
+
+    max-width: 500px;
+
+    p {
+      line-height: 2;
+      letter-spacing: 1px;
+    }
   }
 }
