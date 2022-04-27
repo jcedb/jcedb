@@ -38,6 +38,12 @@
   }
 }
 
+@mixin u_gap-v($gap) {
+  & > :not(:last-child) {
+    margin-bottom: $gap;
+  }
+}
+
 @mixin u_padding-v($pad) {
   padding: $pad 0;
 }
@@ -67,5 +73,13 @@
 
   &:active {
     transform: scale(1.1);
+  }
+}
+
+@mixin u-shadow-effect {
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 3px 7px 1px #aaa;
   }
 }

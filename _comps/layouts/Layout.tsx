@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import React, { CSSProperties } from 'react';
+import { cdxColors } from '../../_core/config/colors.config';
 import { IBaseProps } from '../../_core/models/base.model';
-import Footer from './footer';
-import Navbar from './navbar';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 function Layout({ children }: IBaseProps) {
   return (
@@ -21,7 +22,8 @@ function Layout({ children }: IBaseProps) {
 }
 
 const styles: CSSProperties = {
-  minHeight: '100vh'
+  minHeight: '100vh',
+  backgroundColor: cdxColors.white
 };
 
 export default Layout;
