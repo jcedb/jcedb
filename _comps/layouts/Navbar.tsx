@@ -16,7 +16,7 @@ function Navbar() {
 
         <ul className={styles['navbar__menus']}>
           <li>
-            <a href="#js-manifesto">Manifesto</a>
+            <a href="#js-services">Services</a>
           </li>
           <li>
             <a href="#js-about">Our Team</a>
