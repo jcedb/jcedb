@@ -8,7 +8,7 @@
 }
 
 .services__container {
-  @include u-gap-v(100px);
+  @include u_max-width;
   @include u-padding-v(50px);
 
   overflow: hidden;
@@ -20,8 +20,11 @@
   }
 }
 
+.services__content {
+  @include u-gap-v(100px);
+}
+
 .services__offered {
-  @include u_max-width;
   @include u_between;
 
   &:nth-child(2) {

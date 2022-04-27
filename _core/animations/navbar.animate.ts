@@ -8,7 +8,7 @@ export default () => {
   const nav = document.querySelectorAll('#js-navbar span,a');
   const color = {
     'js-hero': cdxColors.white,
-    'js-manifesto': cdxColors.secondary,
+    'js-services': cdxColors.secondary,
     'js-about': cdxColors.black,
     'js-contact': cdxColors.secondary
   };

@@ -1,0 +1,22 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+
+.cdx-title {
+  @include u-col;
+
+  margin: auto;
+  width: fit-content;
+  align-items: flex-end;
+
+  div {
+    width: 85%;
+    height: 7px;
+    border-radius: 1px;
+    align-items: flex-end;
+    background-color: $secondary;
+  }
+
+  h2 {
+    margin-bottom: 100px;
+  }
+}
