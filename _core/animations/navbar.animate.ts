@@ -1,9 +1,10 @@
-import { gsap } from 'gsap/dist/gsap';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { cdxColors } from '../config/colors.config';
 
 export default () => {
   gsap.registerPlugin(ScrollTrigger);
+
   const nav = document.querySelectorAll('#js-navbar span,a');
   const color = {
     'js-hero': cdxColors.white,
