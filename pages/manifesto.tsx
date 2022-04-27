@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useEffect } from 'react';
 import styles from '../styles/_pages/manifesto.module.scss';
 import CdxButton from '../_comps/CdxButton';
+import CdxSkew from '../_comps/CdxSkew';
 import animate from '../_core/animations/manifesto.animate';
 
 function Manifesto() {
@@ -72,6 +73,8 @@ function Manifesto() {
           </div>
         </div>
       </div>
+
+      <CdxSkew id="js-manifesto-skew" />
     </section>
   );
 }

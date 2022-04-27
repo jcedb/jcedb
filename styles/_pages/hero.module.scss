@@ -18,7 +18,7 @@
 }
 .hero__heading {
   .hero__heading--arrowdown {
-    @include u-scale-effect;
+    @include u_scale-effect;
 
     cursor: pointer;
   }

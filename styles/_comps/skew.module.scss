@@ -1,0 +1,17 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+
+.cdx-skew {
+  @include u_non-exist;
+
+  display: block;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  transform-origin: bottom right;
+  transform: skewY(-5deg);
+  background-color: $black;
+  z-index: 1;
+}

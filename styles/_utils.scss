@@ -64,11 +64,11 @@
   box-shadow: 0 3px 7px 1px #aaa;
 }
 
-@mixin u-transition($prop) {
+@mixin u_transition($prop) {
   transition: $prop 0.5s;
 }
 
-@mixin u-scale-effect {
+@mixin u_scale-effect {
   transition: transform 0.5s;
 
   &:active {
@@ -76,10 +76,18 @@
   }
 }
 
-@mixin u-shadow-effect {
+@mixin u_shadow-effect {
   transition: box-shadow 0.5s;
 
   &:hover {
     box-shadow: 0 3px 7px 1px #aaa;
   }
+}
+
+@mixin u_non-exist {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

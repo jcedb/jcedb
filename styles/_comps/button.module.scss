@@ -2,9 +2,9 @@
 @use '../_base/colors.scss' as *;
 
 .cdx-button {
-  @include u-scale-effect;
-  @include u-shadow-effect;
-  @include u-transition(all);
+  @include u_scale-effect;
+  @include u_shadow-effect;
+  @include u_transition(all);
 
   cursor: pointer;
   border: none;
