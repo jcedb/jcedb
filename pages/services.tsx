@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React, { useEffect } from 'react';
 import styles from '../styles/_pages/services.module.scss';
 import CdxButton from '../_comps/CdxButton';
@@ -13,6 +14,8 @@ function Services() {
     }
   }, []);
 
+  const router = useRouter();
+
   return (
     <section id="js-services" className={styles['services']}>
       <div className={styles['services__container']}>
@@ -23,7 +26,12 @@ function Services() {
         <div className={styles['services__content']}>
           <div className={'js-services-offered ' + styles['services__offered']}>
             <div className={styles['services__offered--graphic']}>
-              <Image src="/services/mobile.svg" height={400} width={400} />
+              <Image
+                src="/services/mobile.svg"
+                height={400}
+                width={400}
+                alt="mobile"
+              />
             </div>
 
             <div className={styles['services__offered--description']}>
@@ -34,13 +42,24 @@ function Services() {
                 accordance with your preferred concept and ideas.
               </p>
 
-              <CdxButton>Get started</CdxButton>
+              <CdxButton
+                onClick={() => {
+                  router.push('#js-contact');
+                }}
+              >
+                Get started
+              </CdxButton>
             </div>
           </div>
 
           <div className={'js-services-offered ' + styles['services__offered']}>
             <div className={styles['services__offered--graphic']}>
-              <Image src="/services/website.svg" height={400} width={400} />
+              <Image
+                src="/services/website.svg"
+                height={400}
+                width={400}
+                alt="website"
+              />
             </div>
 
             <div className={styles['services__offered--description']}>
@@ -51,13 +70,24 @@ function Services() {
                 designed to specifically aid you with your endeavors.
               </p>
 
-              <CdxButton>Get started</CdxButton>
+              <CdxButton
+                onClick={() => {
+                  router.push('#js-contact');
+                }}
+              >
+                Get started
+              </CdxButton>
             </div>
           </div>
 
           <div className={'js-services-offered ' + styles['services__offered']}>
             <div className={styles['services__offered--graphic']}>
-              <Image src="/services/software.svg" height={400} width={400} />
+              <Image
+                src="/services/software.svg"
+                height={400}
+                width={400}
+                alt="software"
+              />
             </div>
 
             <div className={styles['services__offered--description']}>
@@ -69,7 +99,13 @@ function Services() {
                 of your important data.
               </p>
 
-              <CdxButton>Get started</CdxButton>
+              <CdxButton
+                onClick={() => {
+                  router.push('#js-contact');
+                }}
+              >
+                Get started
+              </CdxButton>
             </div>
           </div>
         </div>

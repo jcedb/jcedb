@@ -5,10 +5,51 @@
 .footer {
   @include u_padding-v(10px);
 
+  position: relative;
+  overflow: hidden;
   background-color: $secondary;
 }
 
 .footer__container {
   @include u_max-width;
+  @include u_row;
   @include u_between;
+  @include u_gap(10px);
+  @include u_padding-v(50px);
+
+  align-items: flex-end;
+
+  * {
+    color: $white;
+  }
+}
+
+.footer__company {
+  @include u_gap-v(30px);
+
+  .footer__social-media {
+    @include u_between;
+
+    min-width: 400px;
+    font-size: 30px;
+
+    * {
+      @include u_transition(transform);
+
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px) !important;
+      }
+    }
+  }
+}
+
+.footer__contacts {
+  @include u_gap-v(10px);
+
+  p {
+    display: flex;
+    align-items: center;
+  }
 }

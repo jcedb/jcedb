@@ -21,13 +21,6 @@
   @include u_between;
 }
 
-.navbar__logo {
-  font-family: $josefin;
-  font-size: 35px;
-  font-weight: 900;
-  letter-spacing: -3px;
-}
-
 .navbar__menus {
   @include u_row;
   @include u_gap(30px);
