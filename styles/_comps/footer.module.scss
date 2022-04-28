@@ -1,0 +1,14 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+@use '../_base/fonts.scss' as *;
+
+.footer {
+  @include u_padding-v(10px);
+
+  background-color: $secondary;
+}
+
+.footer__container {
+  @include u_max-width;
+  @include u_between;
+}

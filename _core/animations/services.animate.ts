@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import gsap, { Back } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 export default () => {
@@ -17,6 +17,8 @@ export default () => {
   gsap.utils.toArray('.js-services-offered').forEach((panel, index) => {
     gsap.from(panel as HTMLElement, {
       xPercent: index % 2 === 0 ? 100 : -100,
+      opacity: 0,
+      ease: Back.easeOut,
       scrollTrigger: {
         trigger: panel as HTMLElement,
         start: 'center 80%'
