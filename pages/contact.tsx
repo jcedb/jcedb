@@ -27,7 +27,7 @@ function Contact() {
             <CdxInput placeholder="E-mail" />
           </div>
 
-          <CdxTextarea placeholder="Write your message" />
+          <CdxTextarea placeholder="Tell us what you think" />
 
           <CdxButton style={{ width: '100%', color: cdxColors.white }}>
             Submit

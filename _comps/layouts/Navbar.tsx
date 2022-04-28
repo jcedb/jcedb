@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './../../styles/_comps/navbar.module.scss';
 import animate from '../../_core/animations/navbar.animate';
+import CdxLogo from '../CdxLogo';
 
 function Navbar() {
   useEffect(() => {
@@ -12,7 +13,7 @@ function Navbar() {
   return (
     <nav id="js-navbar" className={styles['navbar']}>
       <div className={styles['navbar__container']}>
-        <span className={styles['navbar__logo']}>CDX</span>
+        <CdxLogo />
 
         <ul className={styles['navbar__menus']}>
           <li>
