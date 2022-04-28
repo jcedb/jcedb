@@ -8,9 +8,9 @@
 
 .hero__container {
   @include u-centered;
+  @include u-max-width;
 
   min-height: 100vh;
-  padding: 10px;
 
   * {
     color: $white;

@@ -1,0 +1,25 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+@use '../_base/fonts.scss' as *;
+
+.cdx-input {
+  width: 100%;
+
+  input {
+    @include u_shadow-effect;
+    @include u_transition(all);
+
+    width: 100%;
+    border: $secondary;
+    border-radius: 1px;
+    padding: 20px;
+    font-size: 16px;
+    font-family: $fredoka;
+    outline: 3px solid $white;
+    background-color: #fff;
+
+    &:focus {
+      outline-color: $secondary;
+    }
+  }
+}
