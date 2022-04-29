@@ -14,4 +14,9 @@
   font-weight: 900;
   text-transform: uppercase;
   background-color: $secondary;
+
+  // MOBILE RESPONSIVE
+  @include u_mobile {
+    width: 100%;
+  }
 }

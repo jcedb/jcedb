@@ -26,9 +26,12 @@
 
 .services__offered {
   @include u_between;
+  @include u_gap(20px);
 
-  &:nth-child(2) {
-    flex-direction: row-reverse;
+  .services__offered--graphic {
+    h3 {
+      display: none;
+    }
   }
 
   .services__offered--description {
@@ -39,6 +42,35 @@
     p {
       line-height: 2;
       letter-spacing: 1px;
+    }
+  }
+
+  // MOBILE RESPONSIVE
+  @include u_mobile {
+    @include u_col;
+
+    &:nth-child(2) {
+      flex-direction: column-reverse;
+    }
+
+    .services__offered--graphic {
+      @include u_col;
+
+      margin: 0;
+      width: 100%;
+
+      h3 {
+        display: block;
+      }
+    }
+
+    .services__offered--description {
+      margin: 0;
+      max-width: unset;
+
+      h3 {
+        display: none;
+      }
     }
   }
 }

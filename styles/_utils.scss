@@ -95,3 +95,15 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+@mixin u_tablet {
+  @media screen and (max-width: 1079px) {
+    @content;
+  }
+}
+
+@mixin u_mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

@@ -11,6 +11,7 @@
   @include u-max-width;
 
   min-height: 100vh;
+  overflow: hidden;
 
   * {
     color: $white;

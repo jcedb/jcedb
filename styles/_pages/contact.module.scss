@@ -26,5 +26,12 @@
     @include u_row;
     @include u_between;
     @include u_gap(20px);
+
+    // MOBILE RESPONSIVE
+    @include u_mobile {
+      @include u_col;
+      @include u_gap(0px);
+      @include u_gap-v(20px);
+    }
   }
 }
