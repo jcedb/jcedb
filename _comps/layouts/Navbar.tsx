@@ -15,17 +15,21 @@ function Navbar() {
       <div className={styles['navbar__container']}>
         <CdxLogo />
 
-        <ul className={styles['navbar__menus']}>
-          <li>
-            <a href="#js-services">Services</a>
-          </li>
-          {/* <li>
-            <a href="#js-about">Our Team</a>
-          </li> */}
-          <li>
-            <a href="#js-contact">Contact</a>
-          </li>
-        </ul>
+        <div className={styles['navbar__menus']}>
+          <ul>
+            <li>
+              <a href="#js-hero">CEDDEX</a>
+            </li>
+            <li>
+              <a href="#js-services">Services</a>
+            </li>
+            <li>
+              <a href="#js-contact">Contact</a>
+            </li>
+          </ul>
+
+          <span id="js-navbar-menu-indicator"></span>
+        </div>
       </div>
     </nav>
   );

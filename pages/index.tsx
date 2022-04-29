@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Services from './services';
-import About from './about';
 import Contact from './contact';
 import Hero from './hero';
 import { useEffect } from 'react';
@@ -17,7 +16,6 @@ const Home: NextPage = () => {
     <>
       <Hero />
       <Services />
-      {/* <About /> */}
       <Contact />
     </>
   );
