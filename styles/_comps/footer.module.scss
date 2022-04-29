@@ -14,10 +14,10 @@
   @include u_max-width;
   @include u_row;
   @include u_between;
-  @include u_gap(10px);
+  @include u_gap(20px);
   @include u_padding-v(50px);
 
-  align-items: flex-end;
+  align-items: flex-start;
 
   * {
     color: $white;
@@ -28,18 +28,62 @@
     @include u_col;
     @include u_gap(0px);
     @include u_gap-v(100px);
+  }
+}
 
-    align-items: flex-start;
+.footer__contacts {
+  @include u_gap-v(10px);
+
+  p {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+}
+
+.footer__updated {
+  @include u_gap-v(10px);
+
+  .footer__updated--form {
+    @include u_row;
+    @include u_gap(10px);
+
+    input {
+      @include u_padding-h(10px);
+
+      height: 50px;
+      outline: none;
+      min-width: 170px;
+      border: 3px solid $white;
+      background-color: $secondary;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    button {
+      @include u_padding-h(30px);
+
+      height: 50px;
+      color: $secondary;
+      background-color: $white;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
 }
 
 .footer__company {
   @include u_gap-v(30px);
 
+  max-width: 300px;
+
   .footer__social-media {
     @include u_between;
 
-    min-width: 350px;
     font-size: 30px;
 
     * {
@@ -58,16 +102,11 @@
     }
   }
 
+  h4 {
+    font-size: 14px;
+  }
+
   p {
     font-size: 12px;
-  }
-}
-
-.footer__contacts {
-  @include u_gap-v(10px);
-
-  p {
-    display: flex;
-    align-items: center;
   }
 }
