@@ -26,6 +26,7 @@ function Services() {
         <div className={styles['services__content']}>
           <div className={'js-services-offered ' + styles['services__offered']}>
             <div className={styles['services__offered--graphic']}>
+              <h3>Mobile App</h3>
               <Image
                 src="/services/mobile.svg"
                 height={400}
@@ -53,15 +54,6 @@ function Services() {
           </div>
 
           <div className={'js-services-offered ' + styles['services__offered']}>
-            <div className={styles['services__offered--graphic']}>
-              <Image
-                src="/services/website.svg"
-                height={400}
-                width={400}
-                alt="website"
-              />
-            </div>
-
             <div className={styles['services__offered--description']}>
               <h3>Website</h3>
               <p>
@@ -78,10 +70,21 @@ function Services() {
                 Get started
               </CdxButton>
             </div>
+
+            <div className={styles['services__offered--graphic']}>
+              <h3>Website</h3>
+              <Image
+                src="/services/website.svg"
+                height={400}
+                width={400}
+                alt="website"
+              />
+            </div>
           </div>
 
           <div className={'js-services-offered ' + styles['services__offered']}>
             <div className={styles['services__offered--graphic']}>
+              <h3>Business Software</h3>
               <Image
                 src="/services/software.svg"
                 height={400}

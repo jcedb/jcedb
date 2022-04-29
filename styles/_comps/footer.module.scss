@@ -22,6 +22,15 @@
   * {
     color: $white;
   }
+
+  // MOBILE RESPONSIVE
+  @include u_mobile {
+    @include u_col;
+    @include u_gap(0px);
+    @include u_gap-v(100px);
+
+    align-items: flex-start;
+  }
 }
 
 .footer__company {
@@ -30,7 +39,7 @@
   .footer__social-media {
     @include u_between;
 
-    min-width: 400px;
+    min-width: 350px;
     font-size: 30px;
 
     * {
@@ -42,6 +51,15 @@
         transform: translateY(-5px) !important;
       }
     }
+
+    // MOBILE RESPONSIVE
+    @include u_mobile {
+      min-width: unset;
+    }
+  }
+
+  p {
+    font-size: 12px;
   }
 }
 

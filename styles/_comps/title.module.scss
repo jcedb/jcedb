@@ -18,5 +18,9 @@
 
   h2 {
     margin-bottom: 100px;
+
+    @include u_mobile {
+      font-size: 40px;
+    }
   }
 }
