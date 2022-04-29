@@ -26,7 +26,7 @@ export default () => {
     const { offsetLeft, offsetWidth } = menu;
     const el = indicator as HTMLElement;
 
-    el.style.left = `${offsetLeft}px`;
+    el.style.left = `${offsetLeft + offsetWidth * 0.18}px`;
     el.style.width = `${offsetWidth - offsetWidth * 0.2}px`;
     el.style.backgroundColor = color[id as keyof typeof color];
   };
