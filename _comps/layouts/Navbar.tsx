@@ -17,7 +17,7 @@ function Navbar() {
 
         <div className={styles['navbar__menus']}>
           <ul>
-            <li>
+            <li style={{ display: 'none' }}>
               <a href="#js-hero">CEDDEX</a>
             </li>
             <li>

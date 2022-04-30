@@ -15,8 +15,8 @@ function Hero() {
     <section id="js-hero" className={styles['hero']}>
       <div className={styles['hero__container']}>
         <h1 className={styles['hero__heading']}>
-          <p className="js-heading">Adapt to modern </p>
-          <p className="js-heading">digital world</p>
+          <p className="js-heading">ADAPT TO MODERN </p>
+          <p className="js-heading">DIGITAL WORLD</p>
           <p className="js-heading">
             <Link href="#js-services">
               <a>

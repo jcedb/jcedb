@@ -27,6 +27,7 @@
 
   p {
     opacity: 0;
+    text-align: end;
 
     &:nth-child(1) {
       transform: translateX(-300px);
@@ -58,6 +59,12 @@
           transform: translateY(-15px);
         }
       }
+    }
+
+    // MOBILE RESPONSIVE
+    @include u_mobile {
+      font-size: 60px;
+      letter-spacing: 0px;
     }
   }
 }
