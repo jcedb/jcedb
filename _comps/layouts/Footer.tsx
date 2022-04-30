@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React, { useEffect } from 'react';
 import {
   FaEnvelope,
@@ -6,7 +5,6 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaPhone,
   FaPhoneAlt,
   FaTwitter
 } from 'react-icons/fa';
