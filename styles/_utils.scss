@@ -16,6 +16,11 @@
   height: 100%;
 }
 
+@mixin u_size($size) {
+  width: $size;
+  height: $size;
+}
+
 @mixin u_between {
   display: flex;
   align-items: center;

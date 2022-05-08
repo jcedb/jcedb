@@ -35,3 +35,25 @@
     }
   }
 }
+
+.contact__loading-indicator {
+  @include u_centered;
+
+  height: 400px;
+}
+
+.contact__sent-message {
+  @include u_centered;
+
+  height: 400px;
+
+  p {
+    font-size: 40px;
+    color: $secondary;
+  }
+
+  button {
+    color: $white;
+    margin-top: 20px;
+  }
+}
