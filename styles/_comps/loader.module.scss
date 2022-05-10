@@ -33,13 +33,13 @@
 
     @keyframes loop {
       0% {
-        transform: scale(30%);
-      }
-      50% {
         transform: scale(100%);
       }
+      50% {
+        transform: scale(50%);
+      }
       100% {
-        transform: scale(30%);
+        transform: scale(100%);
       }
     }
   }
