@@ -7,7 +7,7 @@ import CdxTitle from '../_comps/CdxTitle';
 import animate from '../_core/animations/contact.animate';
 import { cdxColors } from '../_core/config/colors.config';
 import { addDoc, collection } from 'firebase/firestore';
-import { db } from '../.firebase/firebase';
+import { db } from './api/firebase';
 import CdxLoader from '../_comps/CdxLoader';
 import { RxIf } from '../_core/components/RxIf';
 
