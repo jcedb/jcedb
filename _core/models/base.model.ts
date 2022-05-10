@@ -5,6 +5,8 @@ export interface IBaseProps {
   style?: CSSProperties;
   id?: string;
   className?: string;
+  isVisible?: boolean;
+  isDisabled?: boolean;
 
   onClick?: (...args: any) => void | undefined;
 }
