@@ -6,6 +6,11 @@
   @include u_shadow-effect;
   @include u_transition(all);
 
+  &.is-disabled {
+    pointer-events: none;
+    background-color: $gray;
+  }
+
   cursor: pointer;
   border: none;
   border-radius: 1px;

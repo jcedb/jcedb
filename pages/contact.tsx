@@ -24,11 +24,18 @@ function Contact() {
   const [showForm, setShowForm] = useState(true);
   const [showSent, setShowSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isNameValid, setIsNameValid] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isMessageValid, setIsMessageValid] = useState(false);
 
   const clearData = () => {
     setName('');
     setEmail('');
     setMessage('');
+  };
+
+  const validate = () => {
+    return isNameValid && isEmailValid && isMessageValid;
   };
 
   return (
@@ -39,50 +46,60 @@ function Contact() {
         </div>
 
         <RxIf condition={showForm}>
-          <div className={styles['contact__content']}>
+          <form className={styles['contact__content']}>
             <div className={styles['contact__content--row']}>
               <CdxInput
+                type="text"
                 value={name}
                 placeholder="Name"
+                isRequired={true}
                 onChange={value => setName(value)}
+                onValidate={valid => setIsNameValid(valid)}
               />
               <CdxInput
+                type="email"
                 value={email}
                 placeholder="E-mail"
+                isRequired={true}
                 onChange={value => setEmail(value)}
+                onValidate={valid => setIsEmailValid(valid)}
               />
             </div>
 
             <CdxTextarea
               value={message}
               placeholder="Tell us what you think"
+              isRequired={true}
               onChange={value => setMessage(value)}
+              onValidate={valid => setIsMessageValid(valid)}
             />
 
             <CdxButton
-              isDisabled={isLoading}
+              isDisabled={isLoading || !validate()}
               style={{ width: '100%', color: cdxColors.white }}
               onClick={() => {
-                (async () => {
-                  setIsLoading(true);
-                  setShowForm(false);
+                if (validate()) {
+                  (async () => {
+                    setIsLoading(true);
+                    setShowForm(false);
 
-                  await addDoc(collection(db, 'T_ContactUs'), {
-                    name,
-                    email,
-                    message,
-                    date: new Date()
-                  });
+                    await addDoc(collection(db, 'T_ContactUs'), {
+                      name,
+                      email,
+                      message,
+                      date: new Date()
+                    });
 
-                  clearData();
-                  setShowSent(true);
-                  setIsLoading(false);
-                })();
+                    clearData();
+                    setShowSent(true);
+                    setIsLoading(false);
+                  })();
+                }
               }}
             >
               Submit
             </CdxButton>
-          </div>
+          </form>
         </RxIf>
 
         <RxIf condition={isLoading}>
