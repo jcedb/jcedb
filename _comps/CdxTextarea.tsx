@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../styles/_comps/textarea.module.scss';
 import { RxIf } from '../_core/components/RxIf';
 import { IBaseProps } from '../_core/models/base.model';
+import { ICustomRule } from '../_core/models/validation.model';
 import { validate } from '../_core/utils/validationRules';
 
 interface Props extends IBaseProps {
@@ -17,6 +18,7 @@ interface Props extends IBaseProps {
   onChange?: (value: string) => void;
   onValidate?: (isValid: boolean) => void;
   checkDirty?: (isDirty: boolean) => void;
+  validationRules?: ICustomRule[];
 }
 
 function CdxTextarea({
@@ -30,18 +32,23 @@ function CdxTextarea({
   showTextCounter = true,
   onChange,
   onValidate,
-  checkDirty
+  checkDirty,
+  validationRules
 }: Props) {
   const [dirty, setDirty] = useState(0);
   const [error, setError] = useState('');
 
   useEffect(() => {
     if (dirty > 0) {
-      const [status, error] = validate(value?.toString() ?? '', {
-        isRequired,
-        minLength,
-        maxLength
-      });
+      const [status, error] = validate(
+        value?.toString() ?? '',
+        {
+          isRequired,
+          minLength,
+          maxLength
+        },
+        validationRules
+      );
 
       setError(error);
 

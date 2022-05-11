@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "email-validator": "^2.0.4",
     "firebase": "^9.8.0",
     "gsap": "^3.10.4",
     "intl": "^1.2.5",

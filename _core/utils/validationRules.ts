@@ -1,6 +1,10 @@
-import { IValidationRules } from '../models/validation.model';
+import { ICustomRule, IValidationRules } from '../models/validation.model';
 
-export const validate = (value: string, rules: IValidationRules) => {
+export const validate = (
+  value: string,
+  rules: IValidationRules,
+  customRules?: ICustomRule[]
+) => {
   if (rules.isRequired && value.length === 0) {
     return ['required', `This input field is required.`];
   }
@@ -17,6 +21,16 @@ export const validate = (value: string, rules: IValidationRules) => {
       'maxLength',
       `Text length must not exceed ${rules.maxLength ?? 30} characters.`
     ];
+  }
+
+  if (customRules) {
+    for (const custom of customRules) {
+      const { rule, message } = custom;
+
+      if (!rule) {
+        return ['custom', message];
+      }
+    }
   }
 
   return [];

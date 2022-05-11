@@ -3,3 +3,8 @@ export interface IValidationRules {
   minLength?: number;
   maxLength?: number;
 }
+
+export interface ICustomRule {
+  rule: boolean;
+  message: string;
+}
