@@ -4,6 +4,7 @@ import { IBaseProps } from '../_core/models/base.model';
 import _ from 'lodash';
 import { RxIf } from '../_core/components/RxIf';
 import { validate } from '../_core/utils/validationRules';
+import { ICustomRule } from '../_core/models/validation.model';
 
 interface Props extends IBaseProps {
   type?: HTMLInputTypeAttribute;
@@ -18,6 +19,7 @@ interface Props extends IBaseProps {
   onChange?: (value: string) => void;
   onValidate?: (isValid: boolean) => void;
   checkDirty?: (isDirty: boolean) => void;
+  validationRules?: ICustomRule[];
 }
 
 function CdxInput({
@@ -32,18 +34,23 @@ function CdxInput({
   showTextCounter = false,
   onChange,
   onValidate,
-  checkDirty
+  checkDirty,
+  validationRules
 }: Props) {
   const [dirty, setDirty] = useState(0);
   const [error, setError] = useState('');
 
   useEffect(() => {
     if (dirty > 0) {
-      const [status, error] = validate(value?.toString() ?? '', {
-        isRequired,
-        minLength,
-        maxLength
-      });
+      const [status, error] = validate(
+        value?.toString() ?? '',
+        {
+          isRequired,
+          minLength,
+          maxLength
+        },
+        validationRules
+      );
 
       setError(error);
 

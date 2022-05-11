@@ -10,6 +10,7 @@ import { addDoc, collection } from 'firebase/firestore';
 import { db } from './api/firebase';
 import CdxLoader from '../_comps/CdxLoader';
 import { RxIf } from '../_core/components/RxIf';
+import * as EmailValidator from 'email-validator';
 
 function Contact() {
   useEffect(() => {
@@ -34,7 +35,7 @@ function Contact() {
     setMessage('');
   };
 
-  const validate = () => {
+  const validForm = () => {
     return isNameValid && isEmailValid && isMessageValid;
   };
 
@@ -63,6 +64,12 @@ function Contact() {
                 isRequired={true}
                 onChange={value => setEmail(value)}
                 onValidate={valid => setIsEmailValid(valid)}
+                validationRules={[
+                  {
+                    rule: EmailValidator.validate(email),
+                    message: 'Please enter a valid email.'
+                  }
+                ]}
               />
             </div>
 
@@ -75,10 +82,10 @@ function Contact() {
             />
 
             <CdxButton
-              isDisabled={isLoading || !validate()}
+              isDisabled={isLoading || !validForm()}
               style={{ width: '100%', color: cdxColors.white }}
               onClick={() => {
-                if (validate()) {
+                if (validForm()) {
                   (async () => {
                     setIsLoading(true);
                     setShowForm(false);
