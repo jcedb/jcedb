@@ -27,6 +27,8 @@
     @include u_between;
     @include u_gap(20px);
 
+    align-items: flex-start;
+
     // MOBILE RESPONSIVE
     @include u_mobile {
       @include u_col;
@@ -56,4 +58,8 @@
     color: $white;
     margin-top: 20px;
   }
+}
+
+.contact__recaptcha {
+  @include u_centered;
 }
