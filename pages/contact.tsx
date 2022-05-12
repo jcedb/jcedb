@@ -11,6 +11,8 @@ import { db } from './api/firebase';
 import CdxLoader from '../_comps/CdxLoader';
 import { RxIf } from '../_core/components/RxIf';
 import * as EmailValidator from 'email-validator';
+import ReCAPTCHA from 'react-google-recaptcha';
+import _ from 'lodash';
 
 function Contact() {
   useEffect(() => {
@@ -22,6 +24,7 @@ function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [recaptcha, setRecaptcha] = useState('');
   const [showForm, setShowForm] = useState(true);
   const [showSent, setShowSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -36,7 +39,9 @@ function Contact() {
   };
 
   const validForm = () => {
-    return isNameValid && isEmailValid && isMessageValid;
+    return (
+      isNameValid && isEmailValid && isMessageValid && !_.isEmpty(recaptcha)
+    );
   };
 
   return (
@@ -47,7 +52,29 @@ function Contact() {
         </div>
 
         <RxIf condition={showForm}>
-          <form className={styles['contact__content']}>
+          <form
+            action="#"
+            className={styles['contact__content']}
+            onSubmit={() => {
+              if (validForm()) {
+                (async () => {
+                  setIsLoading(true);
+                  setShowForm(false);
+
+                  await addDoc(collection(db, 'T_ContactUs'), {
+                    name,
+                    email,
+                    message,
+                    date: new Date()
+                  });
+
+                  clearData();
+                  setShowSent(true);
+                  setIsLoading(false);
+                })();
+              }
+            }}
+          >
             <div className={styles['contact__content--row']}>
               <CdxInput
                 type="text"
@@ -77,32 +104,21 @@ function Contact() {
               value={message}
               placeholder="Tell us what you think"
               isRequired={true}
+              maxLength={500}
               onChange={value => setMessage(value)}
               onValidate={valid => setIsMessageValid(valid)}
             />
 
+            <ReCAPTCHA
+              className={styles['contact__recaptcha']}
+              sitekey="6LemVOIfAAAAABmy2uiXQLdedU4ByToH37fSONJv"
+              onChange={token => setRecaptcha(token ?? '')}
+            />
+
             <CdxButton
+              type="submit"
               isDisabled={isLoading || !validForm()}
               style={{ width: '100%', color: cdxColors.white }}
-              onClick={() => {
-                if (validForm()) {
-                  (async () => {
-                    setIsLoading(true);
-                    setShowForm(false);
-
-                    await addDoc(collection(db, 'T_ContactUs'), {
-                      name,
-                      email,
-                      message,
-                      date: new Date()
-                    });
-
-                    clearData();
-                    setShowSent(true);
-                    setIsLoading(false);
-                  })();
-                }
-              }}
             >
               Submit
             </CdxButton>

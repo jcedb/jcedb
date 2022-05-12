@@ -26,7 +26,7 @@ function CdxTextarea({
   placeholder,
   helperText,
   errorMessage,
-  minLength = 5,
+  minLength = 49,
   maxLength = 200,
   isRequired = false,
   showTextCounter = true,
