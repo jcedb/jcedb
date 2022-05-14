@@ -111,6 +111,34 @@ function Services() {
               </CdxButton>
             </div>
           </div>
+
+          <div className={'js-services-offered ' + styles['services__offered']}>
+            <div className={styles['services__offered--description']}>
+              <h3>Computer Services</h3>
+              <p>
+                Setup your personal computer and upgrade it to the best
+                performance with our high-end computer parts and products.
+              </p>
+
+              <CdxButton
+                onClick={() => {
+                  router.push('#js-contact');
+                }}
+              >
+                Get started
+              </CdxButton>
+            </div>
+
+            <div className={styles['services__offered--graphic']}>
+              <h3>Computer Services</h3>
+              <Image
+                src="/services/computer-services.svg"
+                height={400}
+                width={400}
+                alt="computer repair and services"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
