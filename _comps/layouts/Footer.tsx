@@ -29,7 +29,7 @@ function Footer() {
 
           <div>
             <p>
-              <FaEnvelope /> &nbsp; &nbsp; jcedb07@gmail.com
+              <FaEnvelope /> &nbsp; &nbsp; ceddex2@gmail.com
             </p>
 
             <p>
