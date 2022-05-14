@@ -11,7 +11,7 @@ export default () => {
     scrollTrigger: '#js-footer-social-media'
   });
 
-  gsap.from('#js-footer p, h3', {
+  gsap.from('#js-footer p,#js-footer p h3', {
     y: 30,
     opacity: 0,
     duration: 1,

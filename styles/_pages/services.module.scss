@@ -53,6 +53,10 @@
       flex-direction: column-reverse;
     }
 
+    &:nth-child(4) {
+      flex-direction: column-reverse;
+    }
+
     .services__offered--graphic {
       @include u_col;
 
