@@ -1,0 +1,32 @@
+@use '../utils' as *;
+@use '../_base/colors.scss' as *;
+
+.technologies {
+  position: relative;
+  background-color: $white;
+}
+
+.technologies__container {
+  @include u_max-width;
+
+  padding-top: 200px;
+  padding-bottom: 100px;
+
+  * {
+    color: $black;
+  }
+
+  .technologies__content {
+    @include u_row;
+    @include u_between;
+
+    span {
+      @include u_margin-h(75px);
+
+      // MOBILE RESPONSIVE
+      @include u_mobile {
+        @include u_margin-h(50px);
+      }
+    }
+  }
+}
