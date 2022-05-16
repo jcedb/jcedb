@@ -4,6 +4,7 @@ import Contact from './contact';
 import Hero from './hero';
 import { useEffect } from 'react';
 import animate from '../_core/animations/index.animate';
+import Technologies from './technologies';
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
     <>
       <Hero />
       <Services />
+      <Technologies />
       <Contact />
     </>
   );
