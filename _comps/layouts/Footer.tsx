@@ -5,6 +5,8 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedin,
+  FaMapMarker,
+  FaMapMarkerAlt,
   FaPhoneAlt,
   FaTwitter
 } from 'react-icons/fa';
@@ -34,6 +36,10 @@ function Footer() {
 
             <p>
               <FaPhoneAlt /> &nbsp; &nbsp; +63 907 174 6910
+            </p>
+
+            <p>
+              <FaMapMarkerAlt /> &nbsp; &nbsp; Molave, Zamboanga del Sur
             </p>
           </div>
         </div>
