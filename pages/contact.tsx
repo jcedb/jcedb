@@ -102,7 +102,7 @@ function Contact() {
 
             <CdxTextarea
               value={message}
-              placeholder="Tell me what you think :)"
+              placeholder="Let me know what you think :)"
               isRequired={true}
               maxLength={500}
               onChange={value => setMessage(value)}
@@ -111,7 +111,7 @@ function Contact() {
 
             <ReCAPTCHA
               className={styles['contact__recaptcha']}
-              sitekey="6LemVOIfAAAAABmy2uiXQLdedU4ByToH37fSONJv"
+              sitekey="6LcUfOEhAAAAAE9nih6cQEoE5lFjaJhW5CZ9B_m1"
               onChange={token => setRecaptcha(token ?? '')}
             />
 
