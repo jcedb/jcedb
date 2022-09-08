@@ -48,7 +48,7 @@ function Contact() {
     <section id="js-contact" className={styles['contact']}>
       <div className={styles['contact__container']}>
         <div className={styles['contact__title']}>
-          <CdxTitle id="js-contact-title">Reach us here</CdxTitle>
+          <CdxTitle id="js-contact-title">Reach me here</CdxTitle>
         </div>
 
         <RxIf condition={showForm}>
@@ -102,7 +102,7 @@ function Contact() {
 
             <CdxTextarea
               value={message}
-              placeholder="Tell us what you think"
+              placeholder="Tell me what you think :)"
               isRequired={true}
               maxLength={500}
               onChange={value => setMessage(value)}

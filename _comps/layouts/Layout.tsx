@@ -9,7 +9,7 @@ function Layout({ children }: IBaseProps) {
   return (
     <>
       <Head>
-        <title>Ceddex Software Development</title>
+        <title>John Cedrick Bermejo</title>
       </Head>
 
       <Navbar />

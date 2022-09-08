@@ -31,7 +31,7 @@ function Footer() {
 
           <div>
             <p>
-              <FaEnvelope /> &nbsp; &nbsp; ceddex2@gmail.com
+              <FaEnvelope /> &nbsp; &nbsp; jcedb07@gmail.com
             </p>
 
             <p>
@@ -66,7 +66,7 @@ function Footer() {
           </div>
 
           <div>
-            <h4>Ceddex Software Development</h4>
+            <h4>John Cedrick Bermejo</h4>
             <p>
               Copyright &copy; {new Date().getFullYear()} | All rights reserved
             </p>
