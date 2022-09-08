@@ -133,8 +133,8 @@ function Contact() {
 
         <RxIf condition={showSent}>
           <div className={styles['contact__sent-message']}>
-            <p>Alright! We got your message.</p>
-            <p>We will get back to you very soon.</p>
+            <p>Alright! I got your message.</p>
+            <p>I will get back to you very soon.</p>
 
             <CdxButton
               onClick={() => {
